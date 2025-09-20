@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>UmaCentral</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body >
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <a href="perfil.html">Perfil</a>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos.html" data-nav>Caballos</a></li>
+        <li><a href="noticias.html" data-nav>Noticias</a></li>
+        <li><a href="enlaces.html" data-nav>Apoya a los caballos</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div data-outlet>
+	<section data-component="EnlacesExternos" class="enlaces">
+		<h1 class="enlaces__title">Páginas recomendadas</h1>
+
+		<article class="enlace-card">
+			<h2 class="enlace-card__title">Fundación Cavalli</h2>
+			<img src="imgs/cavalli.png" alt="Cavalli Foundation Logo" class="enlace-card__image">
+			<a href="https://cavallifoundation.org/" target="_blank" class="enlace-card__link">Visitar</a>
+			<p class="enlace-card__desc">
+				Esta es una breve descripción de la primera página externa.
+			</p>
+		</article>
+
+		<article class="enlace-card">
+			<h2 class="enlace-card__title">Thoroughbred Aftercare Alliance</h2>
+			<img src="imgs/taa.png" alt="TAA Logo" class="enlace-card__image">
+			<a href="https://www.thoroughbredaftercare.org/" target="_blank" class="enlace-card__link">Visitar</a>
+			<p class="enlace-card__desc">
+				Aquí va la descripción de la segunda página que recomendamos.
+			</p>
+		</article>
+
+		<article class="enlace-card">
+			<h2 class="enlace-card__title">Retired Horse Association</h2>
+			<img src="imgs/rha.png" alt="RHA Logo" class="enlace-card__image">
+			<a href="https://rha.or.jp/index.html" target="_blank" class="enlace-card__link">Visitar</a>
+			<p class="enlace-card__desc">
+				Un breve texto que explica de qué trata la tercera página.
+			</p>
+		</article>
+	</section>
+	</div>
+
+
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>

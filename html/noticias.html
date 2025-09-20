@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>UmaCentral</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body >
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <a href="perfil.html">Perfil</a>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos.html" data-nav>Caballos</a></li>
+        <li><a href="noticias.html" data-nav>Noticias</a></li>
+        <li><a href="enlaces.html" data-nav>Apoya a los caballos</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div data-outlet>
+    <!-- aquí irán las vistas (que serán componentes), de momento lo ponemos fijo -->
+    <section data-component="Noticias">
+      <div class="GenericHeader">
+        <h1>Las últimas noticias</h1>
+        <div class="GenericSearch">
+          <h4>O busca noticias por palabras clave:</h4>
+          <input type="search" placeholder="buscar" class="GenericBar">
+        </div>
+      </div>
+  		<ul data-component="ListaNoticias">
+    		<li data-component="CartaNoticia">
+				<img src="imgs/noticia123.jpeg" alt="noticia123"/>
+				<div class="ContenidoNoticia">
+					<span>2 horas</span>
+					<h2>
+					<a href="noticias/noticia123.html">Algo interesante ocurre con alguien interesante.</a>
+					</h2>
+				</div>
+			</li>
+
+    		<li data-component="CartaNoticia">
+				<img src="imgs/noticia122.jpeg" alt="noticia122"/>
+				<div class="ContenidoNoticia">
+					<span>6 horas</span>
+					<h2>
+					<a href="noticias/noticia122.html">Algo interesante ocurre.</a>
+					</h2>
+				</div>
+			</li>
+    		
+    	</ul>	
+  </div>
+  
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>
