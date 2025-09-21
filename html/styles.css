@@ -437,9 +437,9 @@ header[data-component="SiteHeader"] a {
 
 .pedigree {
   border-collapse: collapse;
-  width: 900px;             /* porque al juntarse con las carreras se encogió */
-  max-width: 900px;       /* nunca más grande que 900px */
-  margin: 0 auto 0 2rem;    
+  width: 600px;             /* porque al juntarse con las carreras se encogió */
+  max-width: 600px;       /* nunca más grande que 900px */
+  margin: 0 auto 0 0.75rem;    
   text-align: center;
   font-size: 0.9rem;
   
@@ -468,7 +468,7 @@ header[data-component="SiteHeader"] a {
   background-color: #f0f0f0;
   font-weight: bold;
   display: table;
-  width: 100%;
+  width: calc(100% - 15px);
   table-layout: fixed; /* columnas alineadas */
 }
 
@@ -526,4 +526,14 @@ header[data-component="SiteHeader"] a {
   justify-content: center; /* centra el bloque en la página */
   margin-top: 2rem;
   align-items: flex-start;
+}
+
+.Carreras th:nth-child(1),
+.Carreras td:nth-child(1) {
+  width: 25%; /* Carrera */
+}
+
+.Carreras th:nth-child(5),
+.Carreras td:nth-child(5) {
+  width: 7%; /* Posición */
 }
