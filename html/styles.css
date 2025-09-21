@@ -388,31 +388,55 @@ header[data-component="SiteHeader"] a {
   text-align: justify;
 }
 
-.CaballoPedigri {
+.CaballoDetallesTabla {
   flex: 0.35; /* Ocupa solo el 35% del espacio que ocuparía normalmente */
   border-left: 1px solid #ddd;
 }
 
-.CaballoPedigri table
+.CaballoDetallesTabla table
 {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
-.CaballoPedigri p{
+.CaballoDetallesTabla p{
   text-align: justify;
 }
 
-.CaballoPedigri td {
+.CaballoDetallesTabla td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
 }
 
-.CaballoPedigri th {
+.CaballoDetallesTabla th {
   border: 1px solid #ddd;
   background-color: #eee;
   padding: 0.5rem;
   text-align: left;
+}
+
+.pedigree {
+  border-collapse: collapse;
+  width: 80%;             /* ocupa solo el 80% del contenedor */
+  max-width: 900px;       /* nunca más grande que 900px */
+  margin: 0 auto 0 2rem;    
+  text-align: center;
+  font-size: 0.9rem;
+  
+}
+
+.pedigree td {
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+.pedigree .azul {
+  background-color: #cce5ff; /* color de fondo azul claro */
+}
+
+.pedigree .rosa {
+  background-color: #FDBDDC; /* color de fondo rosa claro */
 }
