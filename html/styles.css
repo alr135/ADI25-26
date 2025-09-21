@@ -354,7 +354,25 @@ header[data-component="SiteHeader"] a {
 .CaballosHeader{
   padding: 1rem;
   text-align: left;
+  display: flex;
+}
 
+.fav-button {
+  padding: 0.5rem;
+  font-size: 1.5rem;        /* tamaño de la estrella */
+  background: none;         /* sin fondo */
+  border: none;             /* sin borde */
+  cursor: pointer;          /* cursor de mano */
+  color: #ccc;              /* estrella apagada */
+  transition: color 0.3s;
+}
+
+.fav-button:hover {
+  color: gold;              /* brilla al pasar el ratón */
+}
+
+.fav-button:active {
+  transform: scale(0.9);    /* pequeña animación al hacer clic */
 }
 
 .columnasCaballos{
@@ -419,7 +437,7 @@ header[data-component="SiteHeader"] a {
 
 .pedigree {
   border-collapse: collapse;
-  width: 80%;             /* ocupa solo el 80% del contenedor */
+  width: 900px;             /* porque al juntarse con las carreras se encogió */
   max-width: 900px;       /* nunca más grande que 900px */
   margin: 0 auto 0 2rem;    
   text-align: center;
@@ -439,4 +457,73 @@ header[data-component="SiteHeader"] a {
 
 .pedigree .rosa {
   background-color: #FDBDDC; /* color de fondo rosa claro */
+}
+
+.Carreras {
+  margin: 0 auto 0 2rem;   
+  max-width: 900px;        /* ancho máximo */
+}
+
+.Carreras thead {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* columnas alineadas */
+}
+
+.Carreras tbody {
+  display: block;
+  max-height: 900px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.Carreras tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.Carreras table {
+  width: 100%;
+  border-collapse: collapse;  /* bordes unidos */
+  text-align: center;         /* centra todo el texto */
+  font-size: 0.95rem;
+}
+
+.Carreras th, 
+.Carreras td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+}
+
+/* Cabecera de la tabla */
+.Carreras th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Colores según posición */
+.Carreras td.pos1 {
+  background-color: #ffd700; /* oro */
+  font-weight: bold;
+}
+
+.Carreras td.pos2 {
+  background-color: #c0c0c0; /* plata */
+  font-weight: bold;
+}
+
+.Carreras td.pos3 {
+  background-color: #cd7f32; /* bronce */
+  font-weight: bold;
+}
+
+.CaballoInfoExtra {
+  display: flex;        /* pone pedigrí y carreras en fila */
+  gap: 0;
+  justify-content: center; /* centra el bloque en la página */
+  margin-top: 2rem;
+  align-items: flex-start;
 }
