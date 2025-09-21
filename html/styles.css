@@ -537,3 +537,161 @@ header[data-component="SiteHeader"] a {
 .Carreras td:nth-child(5) {
   width: 7%; /* Posición */
 }
+
+/* === Ajustes para la página de noticias individuales === */
+.NoticiaContenido {
+  width: 98%;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.NoticiaContenido h1 {
+  
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.NoticiaContenido span {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: 0.5rem;
+}
+
+.NoticiaContenido img.imagenPrincipal {
+  width: 100%;
+  max-height: 800px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.NoticiaContenido img.imagenSecundaria{
+  width: 76%;
+  max-height: 600px;
+  border-radius: 8px;
+  margin: 1rem auto;
+}
+
+.NoticiaContenido p {
+  margin: 1rem;
+  text-align: justify;
+  margin-right: 25%;
+}
+
+/* === Estilos para la sección de comentarios === */
+.comentarios-seccion {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.comentarios-seccion h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.comentario {
+  display: flex;
+  margin-bottom: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.comentario-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.comentario-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comentario-contenido {
+  flex: 1;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.comentario-usuario {
+  font-weight: bold;
+  color: #333;
+}
+
+.comentario-fecha {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.comentario-texto {
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Formulario de comentarios */
+.comentario-formulario {
+  margin-top: 1.5rem;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.comentario-formulario h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.comentario-input-grupo {
+  margin-bottom: 1rem;
+}
+
+.comentario-input-grupo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.comentario-input-grupo input,
+.comentario-input-grupo textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.comentario-input-grupo textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.comentario-boton {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.comentario-boton:hover {
+  background-color: #005fa3;
+}
+

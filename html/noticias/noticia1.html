@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>UmaCentral</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body >
+  <header data-component="SiteHeader">
+    <img src="../imgs/Uma.png">
+    <a href="../perfil.html">Perfil</a>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="../caballos.html" data-nav>Caballos</a></li>
+        <li><a href="../noticias.html" data-nav>Noticias</a></li>
+        <li><a href="../enlaces.html" data-nav>Apoya a los caballos</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  
+
+  <div class="NoticiaContenido">
+    
+    <img src="../imgs/noticia1-1.jpg" alt="Haru Urara memorial at Koichi Circuit" class="imagenPrincipal"/>
+
+    <h1>Homenaje a Haru Urara en el circuito de Koichi</h1>
+    <span>Hace 2 horas</span>
+
+    <p>El pasado fin de semana, el circuito de Koichi fue escenario de un emotivo homenaje a la famosa yegua Haru Urara, conocida por su increíble historia de perseverancia en las carreras de caballos, con un total de 113 carreras disputadas y 0 victorias conseguidas durante toda su carrera. El evento reunió a fanáticos, jinetes y amantes de los caballos, quienes ofrecieron flores y fotos en forma de tributo.</p>
+    <p>Haru Urara se convirtió en un símbolo de esperanza y determinación en Japón, inspirando a muchos con su actitud positiva a pesar de las derrotas constantes. Su historia tocó los corazones de personas de todas las edades, y su legado perdura como un recordatorio de que el valor y la determinación pueden ser más importantes que la victoria misma.</p>
+    <p>Haru Urara falleció el 9 de Septiembre de 2025 en Martha Farm, en la perfectura de Chiba, Japon, a causa de un cólico, una adección intestinal que tiene a afectar a bastantes caballos ancianos siendo una de las principales causas de muerte en estos animales. Según los cuidadores de la granja, el cólico se detecto el día 8 de septiembre al ver que la yegua no mostraba signos de apetito y que no había defecado durante todo el día. Tristemente y pese a los esfuerzos de los veterinarios, Haru Urara fallecío al día siguiente dejando un vacío en el corazón de sus seguidores.</p>
+    <p>El homenaje en Koichi Circuit incluyó una ceremonia especial donde se recordó la vida y carrera de Haru Urara. Los asistentes compartieron anécdotas y reflexiones sobre cómo la yegua había influido en sus vidas, destacando su espíritu inquebrantable y su capacidad para inspirar a otros a nunca rendirse.</p>
+    <p>Además del homenaje en Koichi Circuit los trabajadores de Martha Farm tambien ha dejado que la gente pueda ir a dejar sus condolencias en el establo en el que se alojaba Urara en la granja, donde los fanáticos han estado dejando flores y notas en su memoria a lo largo de estos últimos días.</p>
+
+    <img src="../imgs/noticia1-2.jpg" alt="Fans leaving flowers at Haru Urara's stable" class="imagenSecundaria"/>
+
+    <!-- Sección de comentarios -->
+    <div class="comentarios-seccion">
+      <h2>Comentarios (3)</h2>
+      
+      <!-- Comentario 1 -->
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/perfil.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">JaponLover123</span>
+            <span class="comentario-fecha">Hace 1 hora</span>
+          </div>
+          <p class="comentario-texto">Es una pena la pérdida de Haru Urara. Nunca ganó una carrera pero ganó el corazón de todos los aficionados. Descanse en paz.</p>
+        </div>
+      </div>
+      
+      <!-- Comentario 2 -->
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/rha.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">RiceShower</span>
+            <span class="comentario-fecha">Hace 45 minutos</span>
+          </div>
+          <p class="comentario-texto">Estuve presente en el homenaje y fue muy emotivo. Había gente de todas las edades recordando su legado. No se trata de ganar, sino de nunca rendirse.</p>
+        </div>
+      </div>
+      
+      <!-- Comentario 3 -->
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/taa.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">TurboAce</span>
+            <span class="comentario-fecha">Hace 20 minutos</span>
+          </div>
+          <p class="comentario-texto">Tengo entendido que en Martha Farm están considerando crear un pequeño museo dedicado a su memoria. Si alguien tiene más información, me encantaría saberlo.</p>
+        </div>
+      </div>
+      
+      <!-- Formulario para añadir comentarios -->
+      <div class="comentario-formulario">
+        <h3>Deja tu comentario</h3>
+        <form>
+          <div class="comentario-input-grupo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o nickname">
+          </div>
+          <div class="comentario-input-grupo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Tu email (no se publicará)">
+          </div>
+          <div class="comentario-input-grupo">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..."></textarea>
+          </div>
+          <button type="submit" class="comentario-boton">Publicar comentario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
