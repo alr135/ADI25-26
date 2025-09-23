@@ -475,7 +475,7 @@ header[data-component="SiteHeader"] a {
 .Carreras tbody {
   display: block;
   max-height: 900px;
-  overflow-y: auto;
+  overflow-y: scroll;
   width: 100%;
 }
 
@@ -695,3 +695,53 @@ header[data-component="SiteHeader"] a {
   background-color: #005fa3;
 }
 
+.CaballoNoticias {
+  margin: 2rem auto;
+  max-width: 1000px; /* controla el ancho del carrusel */
+  padding: 0 1rem;   /* deja margen a izquierda/derecha */
+}
+
+.NoticiasCarrusel {
+  display: flex;
+  gap: 1rem;               /* espacio entre tarjetas */
+  overflow-x: auto;        /* scroll horizontal */
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  scroll-snap-type: x mandatory; /* opcional: hace que “salte” por tarjeta */
+}
+
+.NoticiasCarrusel li {
+  flex: 0 0 auto;         /* evita que se estiren */
+  width: 320px;           /* tamaño fijo de cada tarjeta */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  scroll-snap-align: start; /* opcional: alinea cada tarjeta al hacer scroll */
+}
+
+.NoticiasCarrusel img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.ContenidoNoticia {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.ContenidoNoticia h2 {
+  font-size: 1rem;
+  margin: 0.3rem 0 0;
+}
+
+.ContenidoNoticia a {
+  text-decoration: none;
+  color: #333;
+}
+
+.ContenidoNoticia a:hover {
+  text-decoration: underline;
+}
