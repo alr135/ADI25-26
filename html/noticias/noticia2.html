@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>UmaCentral</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body >
+  <header data-component="SiteHeader">
+    <img src="../imgs/Uma.png">
+    <a href="../perfil.html">Perfil</a>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="../caballos.html" data-nav>Caballos</a></li>
+        <li><a href="../noticias.html" data-nav>Noticias</a></li>
+        <li><a href="../enlaces.html" data-nav>Apoya a los caballos</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="NoticiaContenido">
+
+    <img src="../imgs/noticia2-1.jpg" alt="Silly Golshi" class="imagenPrincipal"/>
+
+    <h1>Yo, Gold Ship, tomo el control de éste articulo</h1>
+    <span>Hace 1 hora</span>
+
+    <p>Hola a todos, soy Gold Ship, el legendario caballo de carreras japonés. Hoy he decidido tomar el control de este artículo para compartir con ustedes algunas reflexiones sobre mi carrera y mi vida después de las pistas.</p>
+    <p>Durante mi carrera, tuve el honor de competir en algunas de las carreras más prestigiosas de Japón, incluyendo la Japan Cup y la Arima Kinen. Gané múltiples títulos y establecí récords que aún perduran. Sin embargo, lo que realmente me hizo especial no fueron solo mis victorias, sino mi personalidad única y mi actitud despreocupada hacia las carreras. Siempre fui conocido por mi comportamiento impredecible y mi tendencia a hacer lo que quería, lo que a veces frustraba a mis entrenadores y jinetes.</p>
+    <p>Después de retirarme de las carreras, he estado disfrutando de una vida tranquila en Red Big Farm, donde me dedico a relajarme y disfrutar del campo. A veces, reflexiono sobre mis días en las pistas y me doy cuenta de lo afortunado que fui de tener la oportunidad de competir al más alto nivel. También me siento agradecido por el amor y el apoyo que recibí de mis fanáticos a lo largo de los años.</p>
+    <p>Quiero aprovechar esta oportunidad para agradecer a todos mis seguidores por su apoyo incondicional. Sin ustedes, mi carrera no habría sido la misma. Espero que sigan disfrutando de las carreras de caballos y que siempre recuerden que, al igual que yo, cada caballo tiene su propia historia y personalidad única.</p>
+    <p>Gracias por leer mi historia. ¡Nos vemos en las pistas!</p>
+
+    <img src="../imgs/noticia2-2.jpg" alt="More silly golshi" class="imagenSecundaria"/>
+
+    <!-- Sección de comentarios -->
+    <div class="comentarios-seccion">
+      <h2>Comentarios (2)</h2>
+      
+      <!-- Comentario 1 -->
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/perfil.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">UmaFan99</span>
+            <span class="comentario-fecha">Hace 30 minutos</span>
+          </div>
+          <p class="comentario-texto">¡Gold Ship, eres una leyenda! Gracias por compartir tu historia con nosotros. Siempre recordaré tus carreras épicas.</p>
+        </div>
+      </div>
+      <!-- Comentario 2 -->
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/perfil2.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">Tazuna Hayakawa</span>
+            <span class="comentario-fecha">Hace 33 minutos</span>
+          </div>
+          <p class="comentario-texto">Otra vez no...</p>
+        </div>
+      </div>
+      <!-- Formulario para añadir comentarios -->
+      <div class="comentario-formulario">
+        <h3>Deja tu comentario</h3>
+        <form>
+          <div class="comentario-input-grupo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o nickname">
+          </div>
+          <div class="comentario-input-grupo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Tu email (no se publicará)">
+          </div>
+          <div class="comentario-input-grupo">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..."></textarea>
+          </div>
+          <button type="submit" class="comentario-boton">Publicar comentario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>
