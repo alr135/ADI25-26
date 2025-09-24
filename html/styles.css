@@ -329,6 +329,16 @@ header[data-component="SiteHeader"] a {
   flex-direction: column;
 }
 
+.perfil-favoritos a{
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.perfil-favoritos a:hover{
+  text-decoration: underline;
+}
+
 .favoritos-lista {
   flex: 1;
   border: 1px solid #ccc;
