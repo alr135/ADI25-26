@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>UmaCentral</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body >
+  <header data-component="SiteHeader">
+    <img src="../imgs/Uma.png">
+    <a href="../perfil.html">Perfil</a>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="../caballos.html" data-nav>Caballos</a></li>
+        <li><a href="../noticias.html" data-nav>Noticias</a></li>
+        <li><a href="../enlaces.html" data-nav>Apoya a los caballos</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  
+
+  <div class="NoticiaContenido">
+    
+    <img src="../imgs/noticia-pokke.png" alt="El rugido de Jungle Pocket" class="imagenPrincipal"/>
+
+    <h1>El rugido de victoria de Jungle Pocket</h1>
+    <span>Hace 1 hora</span>
+
+    <p>Nos situamos en 2001. Jungle Pocket había participado en 3 carreras de Grado 3 y una de Grado 1. De ellas destacan una derrota en el Grado 3 y un doloroso tercer puesto en el Grado 1 contra un caballo con resultados increíbles.</p>
+    <p>Agnes Tachyon había quedado primero en su carrera de Debut, siguiendo con la victoria de Grado 3 contra Jungle Pocket en la que marcó un nuevo récord y otra victoria más en una carrera de Grado 2. Finalmente, en su primer intento de Grado 1, ganó de nuevo contra Jungle Pocket y todos sus demás competidores. Su racha perfecta de victorias hizo a todos asumir que ganaría la Triple Corona de la JRA.</p>
+    <p>Fue entonces una gran sorpresa cuando se declaró que el favorito número 1 a ganar las próximas carreras de la corona no podría volver a correr debido a tendonitis.</p>
+    <p>Llegó el momento de la siguiente carrera de la corona, el Derby Japonés. Sin Agnes Tachyon, la gloria estaba al alcance de todos los corredores, pero el público había nombrado como favorito a ganar a Jungle Pocket y este caballo no los decepcionaría.</p>
+    <p>Hay poca documentación del momento de su victoria, pero a continuación se muestra su emocional rugido (sin sonido, por desgracia) junto a su carrera. La victoria de Jungle Pocket en el Derby fue su primera victoria en G1, pero no la última, habiendo conseguido superar al poderoso T.M. Opera O más tarde ese mismo año, en la Japan Cup. Tristemente Jungle Pocket no conseguiría más victorias, pero su espíritu de lucha es inigualable.</p>
+    <!-- Contenedor responsivo para el iframe -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V_QV-aqshmU?si=9OTt0zOBSM3WBvI9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Sección de comentarios -->
+    <div class="comentarios-seccion">
+      <h2>Comentarios (2)</h2>
+      
+      <!-- Comentario 1 -->
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/perfil.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">JaponLover123</span>
+            <span class="comentario-fecha">Hace 20 minutos</span>
+          </div>
+          <p class="comentario-texto">Digno rival de T.M. Opera O. Ambos caballos geniales.</p>
+        </div>
+      </div>
+      <div class="comentario">
+        <div class="comentario-avatar">
+          <img src="../imgs/taa.png" alt="Avatar de usuario">
+        </div>
+        <div class="comentario-contenido">
+          <div class="comentario-header">
+            <span class="comentario-usuario">TurboAce</span>
+            <span class="comentario-fecha">Hace 30 minutos</span>
+          </div>
+          <p class="comentario-texto">Una pena que no haya un video de mayor calidad del rugido.</p>
+        </div>
+      </div>
+      
+      <!-- Formulario para añadir comentarios -->
+      <div class="comentario-formulario">
+        <h3>Deja tu comentario</h3>
+        <form>
+          <div class="comentario-input-grupo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o nickname">
+          </div>
+          <div class="comentario-input-grupo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Tu email (no se publicará)">
+          </div>
+          <div class="comentario-input-grupo">
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" placeholder="Escribe tu comentario aquí..."></textarea>
+          </div>
+          <button type="submit" class="comentario-boton">Publicar comentario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>

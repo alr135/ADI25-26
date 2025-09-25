@@ -705,6 +705,8 @@ header[data-component="SiteHeader"] a {
   background-color: #005fa3;
 }
 
+/* === Para el carrusel de noticias en la página de caballo === */
+
 .CaballoNoticias {
   margin: 2rem auto;
   max-width: 1000px; /* controla el ancho del carrusel */
@@ -754,4 +756,21 @@ header[data-component="SiteHeader"] a {
 
 .ContenidoNoticia a:hover {
   text-decoration: underline;
+}
+
+/* === Estilos para videos enbebidos === */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  border: 0;
+  border-radius: 10px;
 }
