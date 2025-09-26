@@ -774,3 +774,72 @@ header[data-component="SiteHeader"] a {
   border: 0;
   border-radius: 10px;
 }
+
+/* === Estilos para formularios de login y registro === */
+/* Contenedor principal centrado */
+.auth-container {
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 320px;
+  text-align: center;
+  margin: 5vh auto;
+}
+
+/* Título */
+.auth-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Formularios */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.auth-input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0,123,255,0.3);
+}
+
+/* Botón */
+.auth-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+/* Link */
+.auth-link {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
