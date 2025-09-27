@@ -1,7 +1,51 @@
-<form>
-  <label>Caballo: <input type="text" name="id_caballo" required></label><br>
-  <label>Carrera: <input type="text" name="id_carrera" required></label><br>
-  <label>Jinete: <input type="text" name="jinete"></label><br>
-  <label>Posición: <input type="number" name="posicion" min="1"></label><br>
-  <button type="button">Registrar Participación</button>
-</form>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Caballo - UmaCentral</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <h2>Vista de administrador</h2>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos-admin.html" data-nav>Administrar Caballos</a></li>
+        <li><a href="noticias-admin.html" data-nav>Administrar Noticias</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div data-outlet class="create-title">
+    <h1 >Registrar Nueva Participación</h1>
+  </div>
+  <div class="create-container">
+    <h2 class="create-title">Nueva Participación</h2>
+
+    <form action="caballos-admin.html" method="get" class="create-form">
+      <div class="form-field">
+        <label class="form-label">Id del Caballo*</label>
+        <input type="text" class="form-input" name="id_caballo" required>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Id de la Carrera*</label>
+        <input type="text" class="form-input" name="id_carrera" required>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Jinete</label>
+        <input type="text" class="form-input" name="jinete">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Posición</label>
+        <input type="number" class="form-input" name="posicion" min="1">
+      </div>
+      <button type="submit" class="auth-button">Registrar Participación</button>
+    </form>
+  </div> 
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>

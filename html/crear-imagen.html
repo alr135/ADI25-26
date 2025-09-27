@@ -1,6 +1,49 @@
-<form>
-  <label>Caballo: <input type="text" name="id_caballo"></label><br>
-  <label>Descripción: <input type="text" name="descripcion"></label><br>
-  <label>Archivo: <input type="file" name="imagen"></label><br>
-  <button type="button">Subir Imagen</button>
-</form>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Caballo - UmaCentral</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <h2>Vista de administrador</h2>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos-admin.html" data-nav>Administrar Caballos</a></li>
+        <li><a href="noticias-admin.html" data-nav>Administrar Noticias</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div data-outlet class="create-title">
+    <h1 >Crear Nueva Imagen</h1>
+  </div>
+  <div class="create-container">
+    <h2 class="create-title">Nueva Imagen</h2>
+
+    <form action="caballos-admin.html" method="get" class="create-form">
+      <div class="form-field">
+        <label class="form-label">Id del Caballo*</label>
+        <input type="text" class="form-input" name="id_caballo" required>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label">Descripción</label>
+        <textarea class="form-input" name="descripcion" required></textarea>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Archivo*</label>
+        <input type="file" class="form-input" name="imagen" required>
+      </div>
+
+      <button type="submit" class="auth-button">Subir Imagen</button>
+    </form>
+  </div>
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>

@@ -863,3 +863,167 @@ header[data-component="SiteHeader"] a {
 .auth-link:hover {
   text-decoration: underline;
 }
+
+/* === Estilos para la creación tanto de caballos, como de carreras, imagenes y noticias === */
+.create-container{
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.create-container h2{
+  color: #2b00ff;
+  text-align: center;
+}
+
+.create-title{
+  margin: 1rem;
+  color: #333;
+}
+
+.create-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+} 
+
+.create-input{
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.create-input:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 4px rgba(0,123,255,0.3);
+}
+
+.create-form button {
+  grid-column: span 2;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.1);
+}
+
+textarea.form-input {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.create-button{
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-button:hover {
+  background-color: #005fa3;
+}
+
+.create-backbutton{
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-backbutton:hover {
+  background-color: #bbb;
+}
+
+
+
+
+/* Estilo para la barra de acciones de administrador */
+.admin-control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-button {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.admin-button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+.admin-button:active {
+  transform: translateY(0);
+}
+
+/* Ajustes para el buscador */
+.GenericSearch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.GenericSearch h4 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.GenericBar {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}

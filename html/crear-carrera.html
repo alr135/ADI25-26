@@ -1,8 +1,57 @@
-<form>
-  <label>Nombre: <input type="text" name="nombre" required></label><br>
-  <label>Fecha: <input type="date" name="fecha"></label><br>
-  <label>Distancia: <input type="number" name="distancia" step="100"></label><br>
-  <label>Condiciones: <input type="text" name="condiciones"></label><br>
-  <label>Lugar: <input type="text" name="lugar"></label><br>
-  <button type="button">Crear Carrera</button>
-</form>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Caballo - UmaCentral</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <h2>Vista de administrador</h2>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos-admin.html" data-nav>Administrar Caballos</a></li>
+        <li><a href="noticias-admin.html" data-nav>Administrar Noticias</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div data-outlet class="create-title">
+    <h1 >Crear Nueva Carrera</h1>
+  </div>
+
+  <div class="create-container">
+    <h2 class="create-title">Nueva Carrera</h2>
+
+    <form action="caballos-admin.html" method="get" class="create-form">
+      <div class="form-field">
+        <label class="form-label">Nombre*</label>
+        <input type="text" class="form-input" name="nombre" required>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Fecha</label>
+        <input type="date" class="form-input" name="fecha">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Distancia (m)</label>
+        <input type="number" class="form-input" name="distancia" step="100">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Condiciones</label>
+        <input type="text" class="form-input" name="condiciones">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Lugar</label>
+        <input type="text" class="form-input" name="lugar">
+      </div>
+      <button type="submit" class="auth-button">Crear Carrera</button>
+    </form>
+  </div>
+
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>

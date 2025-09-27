@@ -1,19 +1,101 @@
-<form>
-  <label>Nombre: <input type="text" name="nombre" required></label><br>
-  <label>Descripción: <textarea name="descripcion" required></textarea></label><br>
-  <label>Color: <input type="text" name="color"></label><br>
-  <label>Sexo: 
-    <select name="sexo">
-      <option value="Macho">Macho</option>
-      <option value="Hembra">Hembra</option>
-    </select>
-  </label><br>
-  <label>Fecha de nacimiento: <input type="date" name="fecha_nacimiento"></label><br>
-  <label>Fecha de retiro: <input type="date" name="fecha_retiramiento"></label><br>
-  <label>Fecha de fallecimiento: <input type="date" name="fecha_fallecimiento"></label><br>
-  <label>Dueño: <input type="text" name="duenyo"></label><br>
-  <label>Entrenador: <input type="text" name="entrenador"></label><br>
-  <label>Hogar: <input type="text" name="hogar"></label><br>
-  <label>Imagen principal: <input type="file" name="imagen"></label><br>
-  <button type="button">Crear Caballo</button>
-</form>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Caballo - UmaCentral</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <h2>Vista de administrador</h2>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos-admin.html" data-nav>Administrar Caballos</a></li>
+        <li><a href="noticias-admin.html" data-nav>Administrar Noticias</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div data-outlet class="create-title">
+    <h1 >Crear Nuevo Caballo</h1>
+  </div>
+
+  <div class="create-container">
+    <h2 class="create-title">Nuevo Caballo</h2>
+      <form action="caballos-admin.html" method="get" class="create-form">
+        <div class="form-field">
+        <label class="form-label">Nombre*</label>
+        <input type="text" class="form-input" name="nombre" required>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Descripción*</label>
+        <textarea class="form-input" name="descripcion" required></textarea>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Color*</label>
+        <input type="text" class="form-input" name="color" required>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Sexo*</label>
+        <select class="form-input" name="sexo" required>
+          <option value="Macho">Macho</option>
+          <option value="Hembra">Hembra</option>
+
+        </select>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Fecha de nacimiento*</label>
+        <input type="date" class="form-input" name="fecha_nacimiento" required>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Fecha de retiro</label>
+        <input type="date" class="form-input" name="fecha_retiramiento">
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Fecha de fallecimiento</label>
+        <input type="date" class="form-input" name="fecha_fallecimiento">
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Dueño*</label>
+        <input type="text" class="form-input" name="duenyo" required>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Entrenador*</label>
+        <input type="text" class="form-input" name="entrenador" required>
+      </div>
+      
+      <div class="form-field">
+        <label class="form-label">Hogar*</label>
+        <input type="text" class="form-input" name="hogar" required>
+      </div>
+      
+      <div class="form-field form-field-full">
+        <label class="form-label">Imagen principal</label>
+        <input type="file" class="form-input" name="imagen">
+      </div>
+      
+      <button type="submit" class="create-button">Crear Caballo</button>
+    </form>   
+  </div>
+
+  <footer data-component="SiteFooter">
+    <p>© 2025 – UmaCentral</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
