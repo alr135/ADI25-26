@@ -35,12 +35,14 @@ erDiagram
         string password
         string rol
         date fecha_registro
+        string avatar_url
     }
 
     CABALLOS {
         string id
         string nombre
         string descripcion
+        string descripcion_larga
         string color
         string sexo
         date fecha_nacimiento
@@ -59,13 +61,21 @@ erDiagram
         date fecha_subida
     }
     
+    IMAGENES_NOTICIAS {
+        string id
+        string id_noticia
+        string url
+        string tipo  "principal/secundaria"
+        string descripcion
+    }
+
     CARRERAS {
         string id
         string nombre
         date fecha
-        string primer_puesto
-        string segundo_puesto
-        string tercer_puesto
+        string distancia
+        string condiciones
+        string lugar
     }
 
     NOTICIAS {
@@ -73,6 +83,7 @@ erDiagram
         string titulo
         string contenido
         date fecha
+        string url_video
     }
 
     NOTICIA_CABALLO {
@@ -95,7 +106,9 @@ erDiagram
     
     PARTICIPACIONES {
         string id_caballo
-        string id_evento
+        string id_carrera
+        string posicion
+        string jinete
     }
 
     PEDIGRI {
@@ -106,6 +119,7 @@ erDiagram
     }
     
     CABALLOS ||--o{ IMAGENES : "tiene"
+    NOTICIAS ||--o{ IMAGENES_NOTICIAS : "tiene"
     CABALLOS ||--o{ PEDIGRI : "tiene"
     CABALLOS ||--o{ PEDIGRI : "es_referido"
     CABALLOS ||--o{ PARTICIPACIONES : "participa"

@@ -176,6 +176,26 @@ header[data-component="SiteHeader"] a {
   object-fit: cover;
 }
 
+[data-component="CartaNoticia"] a {
+  align-self: start;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+[data-component="CartaNoticia"] button {
+  align-self: self-end;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+[data-component="CartaNoticia"] button:hover {
+  background: #005fa3;
+}
 .ContenidoNoticia {
   display: flex;
   flex-direction: column;

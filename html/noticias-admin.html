@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>UmaCentral</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body >
+  <header data-component="SiteHeader">
+    <img src="imgs/Uma.png">
+    <h2>Vista de administrador</h2>
+  </header>
+  <div data-component="SiteNavBarContainer">
+    <nav data-component="SiteNavBar">
+      <ul>
+        <li><a href="caballos-admin.html" data-nav>Administrar Caballos</a></li>
+        <li><a href="noticias-admin.html" data-nav>Administrar Noticias</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div data-outlet>
+    <!-- aquí irán las vistas (que serán componentes), de momento lo ponemos fijo -->
+    <section data-component="Noticias">
+      <div class="GenericHeader">
+		<a href="crear-noticia.html">
+        	<h1>Crea tu noticia aquí</h1>
+		</a>
+        <div class="GenericSearch">
+          <h4>O busca noticias por palabras clave:</h4>
+          <input type="search" placeholder="buscar" class="GenericBar">
+        </div>
+      </div>
+  		<ul data-component="ListaNoticias">
+			</li>
+    		<li data-component="CartaNoticia">
+				<img src="imgs/noticia-pokke.png" alt="El rugido de Jungle Pocket"/>
+				<div class="ContenidoNoticia">
+					<span>1 hora</span>
+					<h2>
+					<a href="noticias/noticia-pokke.html">El rugido de victoria de Jungle Pocket</a>
+					</h2>
+					<div>
+					<a href="crear-noticia.html">
+						<button>Editar</button>
+					</a>
+					<button style="background-color: red;">Eliminar</button>
+					</div>
+				</div>
+			</li>
+
+    		<li data-component="CartaNoticia">
+				<img src="imgs/noticia1-1.jpg" alt="Koichi Track's Haru Urara memorial"/>
+				<div class="ContenidoNoticia">
+					<span>2 horas</span>
+					<h2>
+					<a href="noticias/noticia1.html">Homenaje a Haru Urara en el circuito de Koichi</a>
+					</h2>
+					<div>
+					<a href="crear-noticia.html">
+						<button>Editar</button>
+					</a>
+					<button style="background-color: red;">Eliminar</button>
+					</div>
+				</div>
+			</li>
+
+    		<li data-component="CartaNoticia">
+				<img src="imgs/noticia2-1.jpg" alt="Silly golshi"/>
+				<div class="ContenidoNoticia">
+					<span>3 horas</span>
+					<h2>
+					<a href="noticias/noticia2.html">Yo, Gold Ship, tomo el control de éste articulo</a>
+					</h2>
+					<div>
+					<a href="crear-noticia.html">
+						<button>Editar</button>
+					</a>
+					<button style="background-color: red;">Eliminar</button>
+					</div>
+				</div>
+    		
+    	</ul>	
+  </div>
+  
+  <footer data-component="SiteFooter">
+    © 2025 – UmaCentral
+  </footer>
+</body>
+</html>
