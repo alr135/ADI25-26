@@ -1,8 +1,8 @@
 # Aplicación web de *Caballos de carreras*
 
-Se pretende desarrollar una aplicación para permitir a fans del deporte de *carreras de caballos* informarse sobre sus caballos favoritos y sobre carreras interesantes que hayan ocurrido recientemente. 
+Se pretende desarrollar una aplicación para permitir a fans del deporte de *carreras de caballos* informarse sobre sus caballos favoritos y sobre carreras o eventos interesantes que hayan ocurrido recientemente. 
 
-Se tendrá una sección para ver los datos de los caballos y otra sección estilo blog con noticias de carreras recientes, sobretodo aquellas en las que hayan participado los caballos listados.
+Se tendrá una sección para ver los datos de los caballos y otra sección estilo blog con noticias recientes, sobretodo aquellas en las que hayan participado los caballos listados.
 También se tendrá un pequeño apartado con enlaces a unas organizaciones que se encargan del cuidado de caballos retirados y que aceptan donaciones (una de España, otra de EEUU y otra de Japón).
 
 Los usuarios en general podrán ver los caballos, las noticias de carreras (sobre las que podrán comentar) y los enlaces a tres organizaciones.
