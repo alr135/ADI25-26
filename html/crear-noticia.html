@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Crear Caballo - UmaCentral</title>
+  <title>Crear Noticia - UmaCentral</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,31 +25,38 @@
     <h2 class="create-title">Nueva Noticia</h2>
 
     <form action="noticias-admin.html" method="get" class="create-form">
+
       <div class="form-field">
         <label class="form-label">Título*</label>
         <input type="text" class="form-input" name="titulo" required>
       </div>
+
       <div class="form-field">
         <label class="form-label">Contenido*</label>
-        <textarea class="form-input" name="contenido" rows="6" required></textarea>
+        <textarea class="form-input" name="contenido" required></textarea>
       </div>
-      <div class="form-field">
-        <label class="form-label">(Opcional) URL de video (YouTube)</label>
-        <input type="url" class="form-input" name="url_video">
-      </div>
+
       <div class="form-field">
         <label class="form-label">Imagen principal*</label>
         <input type="file" class="form-input" name="imagen_principal" required>
       </div>
+
+      <div class="form-field">
+        <label class="form-label">URL de video (YouTube)</label>
+        <input type="url" class="form-input" name="url_video">
+      </div>
+
       <div class="form-field">
         <label class="form-label">Imágenes secundarias</label>
         <input type="file" class="form-input" name="imagenes_secundarias" multiple>
       </div>
+
       <div class="form-field">
-        <label class="form-label">Caballos relacionados (IDs separados por comas)</label>
+        <label class="form-label">IDS caballos relacionados</label>
         <input type="text" class="form-input" name="caballos_relacionados" placeholder="ej: 123, 456">
       </div>
-      <button type="submit" class="auth-button">Crear Noticia</button>
+
+      <button type="submit" class="create-button">Crear Noticia</button>
     </form>
   </div>
   <footer data-component="SiteFooter">
