@@ -104,7 +104,7 @@ header[data-component="SiteHeader"] a {
   border-radius: 6px;
 }
 
-/* Tarjeta de caballo inspirada en product-card */
+/* === Tarjeta de caballo inspirada en product-card  ===*/
 [data-component="CartaCaballo"] {
   background: #fff;
   border: 1px solid #ddd;
