@@ -35,3 +35,29 @@ export async function createImagenNoticia(imagenNoticia) {
   };
   return pb.collection("imagenes_noticias").create(payload);
 }
+
+/**
+ * Eliminar una imagen de caballo por id
+ */
+export async function deleteImagen(id) {
+  try {
+    await pb.collection("imagenes").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar imagen:", err);
+    throw err;
+  }
+}
+
+/**
+ * Eliminar una imagen de noticia por id
+ */
+export async function deleteImagenNoticia(id) {
+  try {
+    await pb.collection("imagenes_noticias").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar imagen de noticia:", err);
+    throw err;
+  }
+}

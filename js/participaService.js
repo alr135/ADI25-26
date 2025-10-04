@@ -15,11 +15,24 @@ export async function createParticipacion(participacion) {
 	  posicion: participacion.posicion,
 	  jinete: participacion.jinete ?? "-",
 	};
-	
+
 	const nuevaParticipacion = await pb.collection("participaciones").create(payload);
 	return nuevaParticipacion;
   } catch (err) {
 	console.error("Error al crear participación:", err);
 	throw err;
+  }
+}
+
+/**
+ * Eliminar una participación por id
+ */
+export async function deleteParticipacion(id) {
+  try {
+    await pb.collection("participaciones").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar participación:", err);
+    throw err;
   }
 }

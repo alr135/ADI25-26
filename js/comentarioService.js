@@ -51,3 +51,17 @@ export async function createComentario(comentario) {
     throw err;
   }
 }
+
+/**
+ * Eliminar un comentario por id
+ */
+export async function deleteComentario(id) {
+  try {
+    await pb.collection("comentarios").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar comentario:", err);
+    throw err;
+  }
+}
+

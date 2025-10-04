@@ -45,3 +45,29 @@ export async function createPedigri(pedigri) {
     throw err;
   }
 }
+
+/**
+ * Eliminar un caballo por id
+ */
+export async function deleteCaballo(id) {
+  try {
+    await pb.collection("caballos").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar caballo:", err);
+    throw err;
+  }
+}
+
+/**
+ * Eliminar una relación de pedigrí por id
+ */
+export async function deletePedigri(id) {
+  try {
+    await pb.collection("pedigri").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar pedigrí:", err);
+    throw err;
+  }
+}

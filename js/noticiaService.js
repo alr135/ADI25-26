@@ -33,3 +33,29 @@ export async function createNoticiaCaballo(noticiaCaballo) {
     throw err;
   }
 }
+
+/**
+ * Eliminar una noticia por id
+ */
+export async function deleteNoticia(id) {
+  try {
+    await pb.collection("noticias").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar noticia:", err);
+    throw err;
+  }
+}
+
+/**
+ * Eliminar una relación noticia-caballo por id
+ */
+export async function deleteNoticiaCaballo(id) {
+  try {
+    await pb.collection("noticia_caballo").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar noticia_caballo:", err);
+    throw err;
+  }
+}

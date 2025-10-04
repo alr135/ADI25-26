@@ -25,3 +25,16 @@ export async function createCarrera(carrera) {
 	throw err;
   }
 }
+
+/**
+ * Eliminar una carrera por id
+ */
+export async function deleteCarrera(id) {
+  try {
+    await pb.collection("carreras").delete(id);
+    return true;
+  } catch (err) {
+    console.error("Error al eliminar carrera:", err);
+    throw err;
+  }
+}
