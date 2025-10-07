@@ -65,3 +65,67 @@ export async function deleteComentario(id) {
   }
 }
 
+/**
+ * Obtener la lista de comentarios, opcionalmente filtrando por id_noticia
+ * @param {string} [id_noticia] - ID de la noticia para filtrar comentarios (opcional)
+ * @returns {Array} Lista de comentarios ordenados por fecha descendente
+ */
+export async function getListaComentarios(id_noticia) {
+  try {
+    const filter = id_noticia ? { id_noticia } : {};
+    const comentarios = await pb.collection("comentarios").getFullList(200, {
+      filter,
+      sort: "-fecha",
+    });
+    return comentarios;
+  } catch (err) {
+    console.error("Error al obtener la lista de comentarios:", err);
+    throw err;
+  }
+}
+
+/**
+ * Obtener la lista de todos los comentarios (sin filtro)
+ * @returns {Array} Lista de todos los comentarios ordenados por fecha descendente
+ */
+export async function getAllComentarios() {
+  try {
+    const comentarios = await pb.collection("comentarios").getFullList(200, {
+      sort: "-fecha",
+    });
+    return comentarios;
+  } catch (err) {
+    console.error("Error al obtener la lista de todos los comentarios:", err);
+    throw err;
+  }
+}
+
+/**
+ * Editar un comentario por id y un objeto con los campos a modificar
+ * @param {string} id - ID del comentario a editar
+ * @param {Object} updatedComment - Objeto con los campos a actualizar (e.g., { contenido, fecha })
+ * @returns {Object} Comentario editado
+ */
+export async function editComentario(id, updatedComment) {
+  try {
+    if (!id) {
+      throw new Error("El ID del comentario es obligatorio para editar.");
+    }
+    if (!updatedComment || !updatedComment.contenido || !updatedComment.id_noticia || !updatedComment.uid_usuario) {
+      throw new Error("Debes proporcionar todos los campos del comentario a editar.");
+    }else{
+      const payload = {
+        contenido: updatedComment.contenido,
+        fecha: updatedComment.fecha ?? new Date().toISOString(),    //Fecha actual si no se proporciona
+        id_noticia: updatedComment.id_noticia,
+        uid_usuario: updatedComment.uid_usuario
+      };
+      const comentarioEditado = await pb.collection("comentarios").update(id, payload);
+      return comentarioEditado;
+    }
+    
+  } catch (err) {
+    console.error("Error al editar comentario:", err);
+    throw err;
+  }
+}
