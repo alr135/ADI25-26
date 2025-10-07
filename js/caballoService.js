@@ -71,3 +71,65 @@ export async function deletePedigri(id) {
     throw err;
   }
 }
+
+/**
+ * Obtener la lista de caballos
+ * @returns {Array} Lista de caballos ordenados por fecha de creación descendente
+ */
+export async function getListaCaballos() {
+  try {
+    const caballos = await pb.collection("caballos").getFullList(200, {
+      sort: "-created",
+    });
+    return caballos;
+  } catch (err) {
+    console.error("Error al obtener la lista de caballos:", err);
+    throw err;
+  }
+}
+
+/**
+ * Obtener un caballo por su nombre o una parte de este
+ * @param {string} nombre - Nombre o parte del nombre del caballo
+ * @returns {Array} Lista de caballos que coinciden con el nombre proporcionado
+ */
+export async function getCaballoByText(nombre) {
+  try {
+    const caballos = await pb.collection("caballos").getFullList(200, {
+      filter: `nombre~"${nombre}"`,
+    });
+    return caballos;
+  } catch (err) {
+    console.error("Error al obtener caballos:", err);
+    throw err;
+  }
+}
+
+
+/** 
+ * Edita un caballo existente a partir de su id
+ * @param {string} id - ID del caballo a editar
+ * @param {Object} caballo - Objeto con los datos actualizados del caballo
+ * @return {Object} El caballo actualizado
+ */
+export async function updateCaballo(id, caballo) {
+  try {
+    const updatedCaballo = await pb.collection("caballos").update(id, {
+      nombre: caballo.nombre,
+      descripcion: caballo.descripcion,
+      descripcion_larga: caballo.descripcion_larga,
+      color: caballo.color,
+      sexo: caballo.sexo,
+      fecha_nacimiento: caballo.fecha_nacimiento,
+      fecha_retiramiento: caballo.fecha_retiramiento,
+      fecha_fallecimiento: caballo.fecha_fallecimiento,
+      duenyo: caballo.duenyo,
+      entrenador: caballo.entrenador,
+      hogar: caballo.hogar,
+    });
+    return updatedCaballo;
+  } catch (err) {
+    console.error("Error al actualizar caballo:", err);
+    throw err;
+  }
+}

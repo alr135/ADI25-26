@@ -59,3 +59,56 @@ export async function deleteNoticiaCaballo(id) {
     throw err;
   }
 }
+
+/**
+ * Obtener la lista de noticias
+ * @returns {Array} Lista de noticias ordenadas por fecha de creación descendente
+ */
+export async function getListaNoticias() {
+  try {
+    const noticias = await pb.collection("noticias").getFullList(200, {
+      sort: "-created",
+    });
+    return noticias;
+  } catch (err) {
+    console.error("Error al obtener la lista de noticias:", err);
+    throw err;
+  }
+}
+
+/** Obtener una noticia por su título o una parte de este
+ * @param {string} titulo - Título o parte del título de la noticia
+ * @returns {Array} Lista de noticias que coinciden con el título proporcionado
+ */
+export async function getNoticiaByTitulo(titulo) {
+  try {
+    const noticias = await pb.collection("noticias").getFullList(200, {
+      filter: `titulo~"${titulo}"`,
+    });
+    return noticias;
+  } catch (err) {
+    console.error("Error al obtener noticias:", err);
+    throw err;
+  }
+}
+
+/** 
+ * Editar una noticia por id
+ * @param {string} id - ID de la noticia a editar
+ * @param {Object} noticia - Objeto con los datos actualizados de la noticia
+ * @return {Object} La noticia actualizada
+ */
+export async function updateNoticia(id, noticia) {
+  try {
+    const updatedNoticia = await pb.collection("noticias").update(id, {
+      titulo: noticia.titulo,
+      contenido: noticia.contenido,
+      fecha: noticia.fecha || new Date().toISOString(),
+      url_video: noticia.url_video,
+    });
+    return updatedNoticia;
+  } catch (err) {
+    console.error("Error al actualizar noticia:", err);
+    throw err;
+  }
+}
