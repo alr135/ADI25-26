@@ -73,6 +73,37 @@ export async function deletePedigri(id) {
 }
 
 /**
+ * Obtener un caballo con todos sus ascendientes (padre/madre)
+ * @param {string} idCaballo - ID del caballo descendiente
+ */
+export async function getCaballoConAscendientes(idCaballo) {
+  try {
+    // 1. Obtener el caballo
+    const caballo = await pb.collection("caballos").getOne(idCaballo);
+
+    // 2. Buscar sus ascendientes en la colección "pedigri" expandiendo la relación
+    const relaciones = await pb.collection("pedigri").getFullList({
+      filter: `id_caballo="${idCaballo}"`,
+      expand: "id_ascendiente", // así trae el objeto caballo ascendiente completo
+    });
+
+    // 3. Devolver caballo + relaciones
+    return {
+      ...caballo,
+      ascendientes: relaciones.map(r => ({
+        tipo_relacion: r.tipo_relacion,
+        id_ascendiente: r.id_ascendiente,
+        nombre_ascendiente: r.nombre_ascendiente,
+        ascendiente: r.expand?.id_ascendiente || null,
+      })),
+    };
+  } catch (err) {
+    console.error("Error al obtener caballo con ascendientes:", err);
+    throw err;
+  }
+}
+
+/**
  * Obtener la lista de caballos
  * @returns {Array} Lista de caballos ordenados por fecha de creación descendente
  */
