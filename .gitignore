@@ -1,0 +1,2 @@
+# Ignorar node_modules dentro de js/
+js/node_modules/

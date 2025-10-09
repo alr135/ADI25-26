@@ -32,6 +32,7 @@ export async function registerUser({ nombre, email, password }) {
       passwordConfirm: password, // PocketBase exige confirmación
       rol: "usuario", // valor por defecto
       fecha_registro: new Date().toISOString(),
+      avatar_url: "" // valor por defecto
     });
     return newUser;
   } catch (err) {
