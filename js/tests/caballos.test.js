@@ -77,6 +77,7 @@ describe("Caballos Service", () => {
     const result2 = await deleteCaballo(ascendienteId);
     expect(result2).toBe(true);
   });
+
 });
 
 // Cerrar sesión al terminar (buena práctica con PocketBase)

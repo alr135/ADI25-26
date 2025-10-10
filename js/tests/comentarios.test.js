@@ -16,13 +16,14 @@ describe("Comentarios Service", () => {
 
   beforeAll(async () => {
   	// Crear un usuario normal
-	const user = await pb.collection("users").create({
-		email: "comentario_tester@example.com",
-		password: "12345678",
-		passwordConfirm: "12345678",
-	});
-	userId = user.id;
-  	// Crear primero una noticia de prueba porque comentario depende de ella
+    const user = await pb.collection("users").create({
+      email: "comentario_tester@example.com",
+      password: "12345678",
+      passwordConfirm: "12345678",
+      
+    });
+    userId = user.id;
+    // Crear primero una noticia de prueba porque comentario depende de ella
     const noticia = await pb.collection("noticias").create({
       titulo: "Noticia de prueba",
       contenido: "Contenido de noticia de prueba para comentarios",
@@ -32,8 +33,13 @@ describe("Comentarios Service", () => {
   });
 
   afterAll(async () => {
+    // Borrar la noticia de prueba
     if (noticiaId) {
       await pb.collection("noticias").delete(noticiaId);
+    }
+    // Borrar el usuario de prueba
+    if (userId) {
+      await pb.collection("users").delete(userId);
     }
   });
 
@@ -41,7 +47,7 @@ describe("Comentarios Service", () => {
     const comentario = await createComentario({
       contenido: "Este es un comentario de prueba",
       id_noticia: noticiaId,
-	  uid_usuario: userId
+	    uid_usuario: userId
     });
 
     expect(comentario).toHaveProperty("id");
