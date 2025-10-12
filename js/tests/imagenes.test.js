@@ -1,4 +1,4 @@
-import { createImagen, deleteImagen, createImagenNoticia, deleteImagenNoticia } from "../imagenService.js";
+import { createImagen, deleteImagen, createImagenNoticia, deleteImagenNoticia, getAllHorseImagenes, getAllNewsImagenes, getImagenesPorCaballo, getImagenesPorNoticia, updateHorseImagen, updateNewsImagen } from "../imagenService.js";
 import { pb, SUPERUSER } from "../pb.js";
 
 beforeAll(async () => {
@@ -99,6 +99,46 @@ describe("Imagenes Service", () => {
     await expect(createImagen({}))
       .rejects
       .toThrow("Debes pasar al menos id_caballo y url");
+  });
+  
+  test("Buscar todas las imágenes de caballos", async () => {
+    const imagenes = await getAllHorseImagenes();
+    expect(Array.isArray(imagenes)).toBe(true);
+    expect(imagenes.length).toBeGreaterThan(0);
+  });
+
+  test("Buscar todas las imágenes de noticias", async () => {
+    const imagenes = await getAllNewsImagenes();
+    expect(Array.isArray(imagenes)).toBe(true);
+    expect(imagenes.length).toBeGreaterThan(0);
+  });
+
+  test("Buscar imágenes por id_caballo", async () => {
+    const imagenes = await getImagenesPorCaballo(caballoId);
+    expect(Array.isArray(imagenes)).toBe(true);
+    expect(imagenes.length).toBeGreaterThan(0);
+  }); 
+
+  test("Buscar imágenes por id_noticia", async () => {
+    const imagenes = await getImagenesPorNoticia(noticiaId);
+    expect(Array.isArray(imagenes)).toBe(true);
+    expect(imagenes.length).toBeGreaterThan(0);
+  });
+
+  test("Actualizar una imagen de caballo", async () => {
+    const updatedImagen = await updateHorseImagen(imagenId, {
+      url: new File([""], "updated-image.jpg", { type: "image/jpeg" }),
+      descripcion: "Descripción actualizada"
+    });
+    expect(updatedImagen.descripcion).toBe("Descripción actualizada");
+  });
+
+  test("Actualizar una imagen de noticia", async () => {
+    const updatedImagenNoticia = await updateNewsImagen(imagenNoticiaId, {
+      url: new File([""], "updated-image.jpg", { type: "image/jpeg" }),
+      descripcion: "Descripción de noticia actualizada"
+    });
+    expect(updatedImagenNoticia.descripcion).toBe("Descripción de noticia actualizada");
   });
 
   test("Eliminar una imagen de caballo", async () => {

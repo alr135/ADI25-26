@@ -1,4 +1,4 @@
-import { createParticipacion, deleteParticipacion } from "../participaService.js";
+import { createParticipacion, deleteParticipacion, getAllParticipaciones, getParticipaciones, editParticipacion } from "../participaService.js";
 import { pb, SUPERUSER } from "../pb.js";
 
 beforeAll(async () => {
@@ -101,6 +101,42 @@ describe("Participaciones Service", () => {
       id_caballo: caballoId,
       id_carrera: carreraId
     })).rejects.toThrow("Debes pasar al menos id_caballo, id_carrera y posicion");
+  });
+
+  test("Obtener todas las participaciones", async () => {
+    const participaciones = await getAllParticipaciones();
+    expect(Array.isArray(participaciones)).toBe(true);
+    expect(participaciones.length).toBeGreaterThan(0);
+  });
+
+  test("Obtener participaciones filtrando por id_caballo", async () => {
+    const participaciones = await getParticipaciones(caballoId, null);
+    expect(Array.isArray(participaciones)).toBe(true);
+    expect(participaciones.length).toBeGreaterThan(0); 
+    participaciones.forEach(p => {
+      expect(p.id_caballo).toBe(caballoId);
+    });
+  });
+
+  test("Obtener participaciones filtrando por id_carrera", async () => {
+    const participaciones = await getParticipaciones(null, carreraId);
+    expect(Array.isArray(participaciones)).toBe(true);
+    expect(participaciones.length).toBeGreaterThan(0);  
+    participaciones.forEach(p => {
+      expect(p.id_carrera).toBe(carreraId);
+    });
+  });
+
+  test("Editar una participación", async () => {
+    const updatedData = {
+      posicion: 3,
+      id_caballo: caballoId,
+      id_carrera: carreraId,
+      jinete: "Jinete Actualizado"
+    };
+    const updatedParticipacion = await editParticipacion(participacionId, updatedData);
+    expect(updatedParticipacion.posicion).toBe(3);
+    expect(updatedParticipacion.jinete).toBe("Jinete Actualizado");
   });
 
   test("Eliminar una participación", async () => {

@@ -1,5 +1,5 @@
 // tests/caballos.test.js
-import { createCaballo, deleteCaballo, createPedigri, deletePedigri } from "../caballoService.js";
+import { createCaballo, deleteCaballo, createPedigri, deletePedigri, getListaCaballos, getCaballoByText, updateCaballo } from "../caballoService.js";
 import { pb, SUPERUSER } from "../pb.js";
 
 beforeAll(async () => {
@@ -64,6 +64,37 @@ describe("Caballos Service", () => {
     expect(pedigri.tipo_relacion).toBe("padre");
 
     pedigriId = pedigri.id;
+  });
+
+  test("Actualizar un caballo", async () => {
+    const updatedCaballo = await updateCaballo(caballoId, {
+      nombre: "Almond Eye Updated",
+      descripcion_larga: "Descripción larga actualizada",
+      descripcion: "Caballo de prueba actualizado",
+      color: "castaño",
+      sexo: "yegua",
+      fecha_nacimiento: "2020-01-01",
+      fecha_retiramiento: null,
+      fecha_fallecimiento: null,
+      duenyo: "Tester Actualizado",
+      entrenador: "Entrenador Test Actualizado",
+      hogar: "Rancho Actualizado"
+    });
+    expect(updatedCaballo.descripcion).toBe("Caballo de prueba actualizado");
+    expect(updatedCaballo.hogar).toBe("Rancho Actualizado");
+  });
+
+  test("Obtener lista de caballos", async () => {
+    const caballos = await getListaCaballos();
+    expect(Array.isArray(caballos)).toBe(true);
+    expect(caballos.length).toBeGreaterThan(0);
+  });
+
+  test("Buscar caballo por texto", async () => {
+    const resultados = await getCaballoByText("Almond");
+    expect(Array.isArray(resultados)).toBe(true);
+    expect(resultados.length).toBeGreaterThan(0);
+    expect(resultados[0].nombre).toBe("Almond Eye");
   });
 
   test("Eliminar pedigrí", async () => {
