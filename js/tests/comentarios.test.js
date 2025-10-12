@@ -1,4 +1,4 @@
-import { createComentario, deleteComentario } from "../comentarioService.js";
+import { createComentario, deleteComentario, getAllComentarios, editComentario } from "../comentarioService.js";
 import { pb, SUPERUSER } from "../pb.js";
 
 beforeAll(async () => {
@@ -55,6 +55,22 @@ describe("Comentarios Service", () => {
     expect(comentario.id_noticia).toBe(noticiaId);
 
     comentarioId = comentario.id;
+  });
+
+  test("Obtener lista de comentarios", async () => {
+    const comentarios = await getAllComentarios(noticiaId);
+    expect(Array.isArray(comentarios)).toBe(true);
+    expect(comentarios.length).toBeGreaterThan(0);
+  });
+
+  test("Editar un comentario", async () => {
+    const comentarioEditado = await editComentario(comentarioId, {
+      contenido: "Comentario editado en prueba",
+      id_noticia: noticiaId,
+      uid_usuario: userId
+    });
+    expect(comentarioEditado).toHaveProperty("id");
+    expect(comentarioEditado.contenido).toBe("Comentario editado en prueba");
   });
 
   test("Eliminar un comentario", async () => {
