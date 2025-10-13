@@ -77,15 +77,13 @@ describe("User Service", () => {
   });
 
   test("Actualizar un usuario", async () => {
-    const updatedUser = await updateUser(testUserId, {
-      nombre: "Usuario Actualizado",
-      rol: "admin",
-      password: testUserPassword // Mantener la misma contraseña
-    });
-    
-    expect(updatedUser.id).toBe(testUserId);
-    expect(updatedUser.nombre).toBe("Usuario Actualizado");
-    expect(updatedUser.rol).toBe("admin");
+      const updatedUser = await updateUser(testUserId, {
+        nombre: "Usuario Actualizado",
+        rol: "admin",
+      }, testUserPassword); // Proporcionar la contraseña actual como oldPassword
+      expect(updatedUser.id).toBe(testUserId);
+      expect(updatedUser.nombre).toBe("Usuario Actualizado");
+      expect(updatedUser.rol).toBe("admin");
   });
 
   test("Cerrar sesión", () => {
