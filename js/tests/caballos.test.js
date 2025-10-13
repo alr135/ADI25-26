@@ -68,7 +68,7 @@ describe("Caballos Service", () => {
 
   test("Actualizar un caballo", async () => {
     const updatedCaballo = await updateCaballo(caballoId, {
-      nombre: "Almond Eye Updated",
+      nombre: "Almond Eye actualizada",
       descripcion_larga: "Descripción larga actualizada",
       descripcion: "Caballo de prueba actualizado",
       color: "castaño",
@@ -94,7 +94,7 @@ describe("Caballos Service", () => {
     const resultados = await getCaballoByText("Almond");
     expect(Array.isArray(resultados)).toBe(true);
     expect(resultados.length).toBeGreaterThan(0);
-    expect(resultados[0].nombre).toBe("Almond Eye");
+    expect(resultados[0].nombre).toBe("Almond Eye actualizada");
   });
 
   test("Eliminar pedigrí", async () => {
